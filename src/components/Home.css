@@ -1,0 +1,73 @@
+/* Home.css */
+
+/* Main container for the Home component */
+.home-container {
+  background-color: #141414; /* Netflix dark background */
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Hero banner at the top */
+.home-hero {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* Overlay gradient for hero text */
+.home-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(20,20,20,1), rgba(20,20,20,0));
+}
+
+/* Hero text */
+.home-hero h1 {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Rows of movies */
+.home-row {
+  margin-bottom: 30px;
+}
+
+.home-row h2 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.home-row-posters {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.home-row-posters::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.home-poster {
+  max-height: 200px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.home-poster:hover {
+  transform: scale(1.1);
+}
